@@ -1,6 +1,13 @@
-const GoodsItem = ({id, name, description, price, full_background}) => {
+const GoodsItem = ({
+	id,
+	name,
+	description,
+	price,
+	full_background,
+	addToBasket = Function.prototype,
+}) => {
 	return (
-		<div className='card' id={id}>
+		<div className='card'>
 			<div className='card-image'>
 				<img src={full_background} alt={name} />
 			</div>
@@ -9,7 +16,7 @@ const GoodsItem = ({id, name, description, price, full_background}) => {
 				<p>{description}</p>
 			</div>
 			<div className='card-action'>
-				<button className='btn' href='#'>
+				<button className='btn' onClick={() => addToBasket({id, name, price})}>
 					Купить
 				</button>
 				<span className='right' style={{fontSize: '1.8rem'}}>
