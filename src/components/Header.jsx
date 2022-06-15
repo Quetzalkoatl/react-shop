@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-function Header() {
+const Header = () => {
 	return (
 		<nav className='green darken-1'>
 			<div className='nav-wrapper'>
@@ -14,6 +14,6 @@ function Header() {
 			</div>
 		</nav>
 	);
-}
+};
 
-export {Header};
+export default Header;

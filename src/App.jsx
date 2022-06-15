@@ -1,8 +1,15 @@
-/* eslint-disable react/no-direct-mutation-state */
-import React, {Component} from 'react';
-class App extends Component {
-	render() {
-		return;
-	}
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Shop from './components/Shop';
+
+function App() {
+	return (
+		<>
+			<Header />
+			<Shop />
+			<Footer />
+		</>
+	);
 }
+
 export default App;
