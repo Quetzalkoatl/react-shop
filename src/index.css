@@ -91,6 +91,14 @@ label:not(:last-child) {
   margin-right: 10rem;
 }
 
+.alert-message {
+  position: fixed;
+  top: 2.5rem;
+  right: 6rem;
+
+  animation: fade-in 500ms ease-in-out
+}
+
 @keyframes show {
   from {
     top: 70%;
@@ -100,5 +108,17 @@ label:not(:last-child) {
   to {
     top: 50%;
     opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    right: 4rem;
+  }
+
+  to {
+    opacity: 1;
+    right: 6rem;
   }
 }
