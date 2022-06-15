@@ -4,10 +4,26 @@ const BasketItem = ({
 	price,
 	quantity,
 	removeFromBasket = Function.prototype,
+	incQuantity = Function.prototype,
+	decQuantity = Function.prototype,
 }) => {
 	return (
 		<li className='collection-item'>
-			{name} x {quantity} = {price * quantity} руб
+			{name}{' '}
+			<i
+				className='material-icons basket-quantity'
+				onClick={() => decQuantity(id)}
+			>
+				remove
+			</i>{' '}
+			x {quantity}{' '}
+			<i
+				className='material-icons basket-quantity'
+				onClick={() => incQuantity(id)}
+			>
+				add
+			</i>{' '}
+			= {price * quantity} руб
 			<span className='secondary-content'>
 				<i
 					className='material-icons basket-delete'

@@ -75,6 +75,12 @@ nav {
   cursor: pointer;
 }
 
+.basket-quantity {
+  cursor: pointer;
+  vertical-align: middle;
+  color: #26a69a;
+}
+
 .search-btn {
   position: absolute;
   top: 0;

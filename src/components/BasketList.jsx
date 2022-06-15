@@ -4,6 +4,8 @@ const BasketList = ({
 	order = [],
 	handleBasketShow = Function.prototype,
 	removeFromBasket = Function.prototype,
+	incQuantity = Function.prototype,
+	decQuantity = Function.prototype,
 }) => {
 	const totalPrice = order.reduce((sum, elem) => {
 		return sum + elem.price * elem.quantity;
@@ -19,6 +21,8 @@ const BasketList = ({
 							key={item.id}
 							{...item}
 							removeFromBasket={removeFromBasket}
+							incQuantity={incQuantity}
+							decQuantity={decQuantity}
 						/>
 					);
 				})
